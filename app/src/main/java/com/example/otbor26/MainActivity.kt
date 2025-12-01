@@ -2115,20 +2115,7 @@ fun korzina(GoTo_main_katalog: () -> Unit){
         )) {
 
         }
-        btn_main(item = Btn_main (
-            width_btn = 355,
-            height_btn = 654,
-            label = "Перейти к оформлению заказа",
-            color = 0xFF1A6FEE,
-            colortext = 0xFFFFFFFF,
-            shape = 10,
-            textsize = 17,
-            font = robotobold,
-            padingtop = 120,
-            padingstart = 25
-        )) {
 
-        }
 
     }
 }
