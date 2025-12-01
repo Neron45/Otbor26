@@ -36,10 +36,3 @@ val CustomIcon1: ImageVector
         }.build()
     }
 
-@Composable
-fun CustomIcon1(
-) {
-    Image(
-        painter = painterResource(R.drawable.)
-    )
-}
