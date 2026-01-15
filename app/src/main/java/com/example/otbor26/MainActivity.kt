@@ -66,6 +66,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.otbor26.ui.theme.botmBar
 import com.example.otbor26.ui.theme.btn
+import com.example.uikit.UIKITbtn
+import com.example.uikit.Btn
+import com.example.uikit.click
+import com.example.uikit.counter
 import com.example.otbor26.ui.theme.btn_main
 import com.example.otbor26.ui.theme.card
 import com.example.otbor26.ui.theme.cardKr
@@ -202,9 +206,9 @@ fun MyApp(activity: MainActivity){
 }
 
 
-var click by mutableStateOf<String?>("")
+
 var click_ by mutableStateOf<String?>("Все")
-var counter by mutableStateOf<Int>(0)
+
 
 @Composable
 fun splash(onTimeout: () -> Unit){
@@ -331,9 +335,9 @@ fun sign_in(GoTo_sign_in2: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"1", "1"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"2", "2"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "3", "3"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"1", "1"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"2", "2"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "3", "3"))
             }
             //2
             Row(
@@ -352,9 +356,9 @@ fun sign_in(GoTo_sign_in2: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "4", "4"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "5", "5"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF,"6", "6"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "4", "4"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "5", "5"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF,"6", "6"))
 
             }
             //3
@@ -374,9 +378,9 @@ fun sign_in(GoTo_sign_in2: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"7", "7"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,  0xFFFFFFFF,"8", "8"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"9", "9"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"7", "7"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,  0xFFFFFFFF,"8", "8"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"9", "9"))
 
             }
             //4
@@ -399,7 +403,7 @@ fun sign_in(GoTo_sign_in2: () -> Unit){
                 Spacer(modifier = Modifier
                     .size(80.dp))
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "0", "0"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "0", "0"))
 
                 Button(
                     onClick = {

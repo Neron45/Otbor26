@@ -51,7 +51,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.otbor26.BBL
-import com.example.otbor26.Btn
+import com.example.uikit.Btn
 import com.example.otbor26.R.drawable
 import com.example.otbor26.Btn_main
 import com.example.otbor26.CardKR
@@ -62,9 +62,9 @@ import com.example.otbor26.TxtField
 import com.example.otbor26.TxtFieldImg
 import com.example.otbor26.card1vis
 import com.example.otbor26.card2vis
-import com.example.otbor26.click
+import com.example.uikit.click
 import com.example.otbor26.click_
-import com.example.otbor26.counter
+import com.example.uikit.counter
 import com.example.otbor26.main_
 import com.example.otbor26.main_katalog
 import com.example.otbor26.main_profil
