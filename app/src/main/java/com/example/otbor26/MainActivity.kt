@@ -67,9 +67,27 @@ import androidx.navigation.compose.rememberNavController
 import com.example.otbor26.ui.theme.botmBar
 import com.example.otbor26.ui.theme.btn
 import com.example.uikit.UIKITbtn
+import com.example.uikit.UIKITcard
+import com.example.uikit.UIKITbottombarelem
+import com.example.uikit.UIKIToutltextfield
+import com.example.uikit.UIKITbotmBar
+import com.example.uikit.UIKITbtn_main
+import com.example.uikit.UIKITcardKr
+import com.example.uikit.UIKITcheckBx
+import com.example.uikit.UIKITinputs_proekt
+import com.example.uikit.UIKIToutltextfieldImg
 import com.example.uikit.Btn
+import com.example.uikit.TxtFieldImg
+import com.example.uikit.Btn_main
+import com.example.uikit.Cards
+import com.example.uikit.CardKR
+import com.example.uikit.BBL
+import com.example.uikit.TxtField
+
 import com.example.uikit.click
 import com.example.uikit.counter
+import com.example.uikit.card1vis
+import com.example.uikit.card2vis
 import com.example.otbor26.ui.theme.btn_main
 import com.example.otbor26.ui.theme.card
 import com.example.otbor26.ui.theme.cardKr
@@ -79,6 +97,7 @@ import com.example.otbor26.ui.theme.outltextfield
 import com.example.otbor26.ui.theme.outltextfieldImg
 import com.example.otbor26.ui.theme.statusbar
 import com.example.otbor26.ui.theme.summaAll
+import com.example.uikit.UIKITstatusbar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.Unit
@@ -110,8 +129,6 @@ val parol = mutableStateOf("")
 
 val p1 = mutableStateOf("")
 val p2 = mutableStateOf("")
-var card1vis = mutableStateOf(false)
-var card2vis = mutableStateOf(false)
 
 @Composable
 fun MyApp(activity: MainActivity){
@@ -150,6 +167,7 @@ fun MyApp(activity: MainActivity){
                 GoToCreatepin = {navController.navigate("createpin")}
             )
         }
+
         composable("createpin"){
             createpin(
                 GoTo_main = {navController.navigate("main")}
@@ -434,7 +452,7 @@ fun sign_in(GoTo_sign_in2: () -> Unit){
 
 @Composable
 fun sign_in2(GoTo_sign_in3: () -> Unit){
-    statusbar()
+    UIKITstatusbar()
 
     Column(
         modifier = Modifier
@@ -552,7 +570,7 @@ fun sign_in2(GoTo_sign_in3: () -> Unit){
                     fontSize = 20.sp
                 )
 
-                outltextfieldImg(item = TxtFieldImg(
+                UIKIToutltextfieldImg(item = TxtFieldImg(
                     text = remember { mutableStateOf("") } ,
                     400,
                     80,
@@ -573,7 +591,7 @@ fun sign_in2(GoTo_sign_in3: () -> Unit){
             }
         }
 
-        btn_main(item = Btn_main(
+        UIKITbtn_main(item = Btn_main(
             width_btn = 375,
             height_btn = 70,
             color = 0xFF1A6FEE,
@@ -671,7 +689,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
             .fillMaxSize()
             .background(Color.White),
     ) {
-        statusbar()
+        UIKITstatusbar()
         Text(
             text = "Создание Профиля",
             fontSize = 24.sp,
@@ -705,7 +723,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceBetween
         ) {
-            outltextfield(
+            UIKIToutltextfield(
                 item = TxtField(
                     text = remember { mutableStateOf("") },
                     400,
@@ -721,7 +739,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
                     0xFFAEAEB2,
                 )
             )
-            outltextfield(
+            UIKIToutltextfield(
                 item = TxtField(
                     text = remember { mutableStateOf("") },
                     400,
@@ -737,7 +755,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
                     0xFFAEAEB2,
                     )
             )
-            outltextfield(
+            UIKIToutltextfield(
                 item = TxtField(
                     text = remember { mutableStateOf("") },
                     400,
@@ -753,7 +771,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
                     0xFFAEAEB2,
                     )
             )
-            outltextfield(
+            UIKIToutltextfield(
                 item = TxtField(
                     text = remember { mutableStateOf("") },
                     400,
@@ -769,7 +787,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
                     0xFFAEAEB2,
                     )
             )
-            outltextfieldImg(item = TxtFieldImg(
+            UIKIToutltextfieldImg(item = TxtFieldImg(
                 text = remember { mutableStateOf("") } ,
                 350,
                 55,
@@ -787,7 +805,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
             )
             )
 
-            outltextfield(
+            UIKIToutltextfield(
                 item = TxtField(
                     text = remember { mutableStateOf("") },
                     400,
@@ -806,7 +824,7 @@ fun sign_in3(GoToCreatepasword: () -> Unit){
 
         }
 
-        btn_main(item = Btn_main(
+        UIKITbtn_main(item = Btn_main(
             width_btn = 350,
             height_btn = 60,
             color = 0xFF1A6FEE,
@@ -837,7 +855,7 @@ fun createpasword(GoToCreatepin: () -> Unit){
             .background(Color.White),
 
     ) {
-        statusbar()
+        UIKITstatusbar()
 
         Row(
             modifier = Modifier
@@ -959,7 +977,7 @@ fun createpasword(GoToCreatepin: () -> Unit){
 
 
 
-        btn_main(item = Btn_main(
+        UIKITbtn_main(item = Btn_main(
             width_btn = 350,
             height_btn = 70,
             color = 0xFF1A6FEE,
@@ -996,7 +1014,7 @@ fun createpin(GoTo_main: () -> Unit){
         }
     }
 
-    statusbar()
+    UIKITstatusbar()
 
     Column(
         modifier = Modifier
@@ -1078,9 +1096,9 @@ fun createpin(GoTo_main: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"1", "1"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"2", "2"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "3", "3"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"1", "1"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"2", "2"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "3", "3"))
             }
             //2
             Row(
@@ -1099,9 +1117,9 @@ fun createpin(GoTo_main: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "4", "4"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "5", "5"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF,"6", "6"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "4", "4"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF, "5", "5"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,0xFFFFFFFF,"6", "6"))
 
             }
             //3
@@ -1121,9 +1139,9 @@ fun createpin(GoTo_main: () -> Unit){
                     }
                 }
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"7", "7"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF,  0xFFFFFFFF,"8", "8"))
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"9", "9"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"7", "7"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF,  0xFFFFFFFF,"8", "8"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF,"9", "9"))
 
             }
             //4
@@ -1146,7 +1164,7 @@ fun createpin(GoTo_main: () -> Unit){
                 Spacer(modifier = Modifier
                     .size(80.dp))
 
-                btn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "0", "0"))
+                UIKITbtn(item =  Btn(80, 80, 0xFFFFFFFF, 0xFFFFFFFF, "0", "0"))
 
                 Button(
                     onClick = {
@@ -1190,7 +1208,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
             .fillMaxHeight(0.88f),
 
             ) {
-            statusbar()
+            UIKITstatusbar()
 
             OutlinedTextField(
                 value = text.value,
@@ -1363,7 +1381,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
                     .height(100.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 80,
                     height_btn = 50,
                     label = "Все",
@@ -1379,7 +1397,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
                     click_ = "Все"
                 }
 
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 125,
                     height_btn = 50,
                     label = "Женщинам",
@@ -1395,7 +1413,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
                     click_ = "Женщинам"
                 }
 
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 125,
                     height_btn = 50,
                     label = "Мужчинам",
@@ -1421,7 +1439,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
                     .weight(1f)
 
             ) {
-                card(
+                UIKITcard(
                     item = Cards(
                     340,
                     140,
@@ -1462,7 +1480,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
                     125,
                 )){GoTo_korzina()}
 
-                card(item = Cards(
+                UIKITcard(item = Cards(
                     340,
                     140,
                     20,
@@ -1510,7 +1528,7 @@ fun main_(GoTo_main_katalog: () -> Unit,GoTo_main_proekt: () -> Unit,GoTo_main_p
 
 
         }
-        botmBar({GoTo_main_katalog()},{},{GoTo_main_proekt()},{GoTo_main_profil()},)
+        UIKITbotmBar({GoTo_main_katalog()},{},{GoTo_main_proekt()},{GoTo_main_profil()},)
 
     }
 }
@@ -1531,7 +1549,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                 .fillMaxWidth()
                 .fillMaxHeight(0.88f)
         ) {
-            statusbar()
+            UIKITstatusbar()
 
             Row(
                 modifier = Modifier
@@ -1596,7 +1614,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                     .height(100.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 80,
                     height_btn = 50,
                     label = "Все",
@@ -1612,7 +1630,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                     click_ = "Все"
                 }
 
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 125,
                     height_btn = 50,
                     label = "Женщинам",
@@ -1628,7 +1646,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                     click_ = "Женщинам"
                 }
 
-                btn_main(item = Btn_main (
+                UIKITbtn_main(item = Btn_main (
                     width_btn = 125,
                     height_btn = 50,
                     label = "Мужчинам",
@@ -1653,7 +1671,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                     .fillMaxWidth()
 
             ) {
-                card(
+                UIKITcard(
                     item = Cards(
                         340,
                         140,
@@ -1696,7 +1714,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
                     )
                 ){if (card1vis.value == false) card1vis.value = true else card1vis.value = false}
 
-                card(
+                UIKITcard(
                     item = Cards(
                         340,
                         140,
@@ -1788,7 +1806,7 @@ fun main_katalog(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_
 
 
         }
-        botmBar({},{GoTo_main()},{GoTo_main_proekt()},{GoTo_main_profil()})
+        UIKITbotmBar({},{GoTo_main()},{GoTo_main_proekt()},{GoTo_main_profil()})
     }
 }
 @Composable
@@ -1805,7 +1823,7 @@ fun main_proekt(GoTo_main: () -> Unit, GoTo_main_profil: () -> Unit, GoTo_main_k
                 .background(Color.White),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            statusbar()
+            UIKITstatusbar()
 
             Row(
                 modifier = Modifier
@@ -1890,7 +1908,7 @@ fun main_proekt(GoTo_main: () -> Unit, GoTo_main_profil: () -> Unit, GoTo_main_k
             }
 
         }
-        botmBar({GoTo_main_katalog()},{GoTo_main()},{},{GoTo_main_profil()})
+        UIKITbotmBar({GoTo_main_katalog()},{GoTo_main()},{},{GoTo_main_profil()})
 
 
     }
@@ -1909,7 +1927,7 @@ fun main_profil(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_k
                 .fillMaxHeight(0.88f)
                 .background(Color.White)
         ) {
-            statusbar()
+            UIKITstatusbar()
 
             Text(
                 text = "Эдуард",
@@ -1981,7 +1999,7 @@ fun main_profil(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_k
                         .padding(start = 25.dp, top = 27.dp)
                 )
 
-                checkBx()
+                UIKITcheckBx()
             }
 
 
@@ -2012,7 +2030,7 @@ fun main_profil(GoTo_main: () -> Unit, GoTo_main_proekt: () -> Unit, GoTo_main_k
                 )
             }
         }
-        botmBar({GoTo_main_katalog()},{GoTo_main()},{GoTo_main_proekt()},{})
+        UIKITbotmBar({GoTo_main_katalog()},{GoTo_main()},{GoTo_main_proekt()},{})
 
     }
 
@@ -2026,8 +2044,8 @@ fun create_proekt(GoTo_main_profil: () -> Unit,  GoTo_main: () -> Unit, GoTo_mai
             .height(1100.dp)
             .background(Color.White)
     ) {
-        statusbar()
-        inputs_proekt()
+        UIKITstatusbar()
+        UIKITinputs_proekt()
 
         botmBar({GoTo_main_katalog()},{GoTo_main()},{},{GoTo_main_profil()})
     }
@@ -2041,7 +2059,7 @@ fun korzina(GoTo_main_katalog: () -> Unit){
             .background(Color.White)
     ) {
 
-        statusbar()
+        UIKITstatusbar()
 
         Button(
             onClick = {GoTo_main_katalog()},
@@ -2095,7 +2113,7 @@ fun korzina(GoTo_main_katalog: () -> Unit){
         }
 
         if (card1vis.value){
-            cardKr(
+            UIKITcardKr(
                 item = CardKR(
                     340,
                     140,
@@ -2127,7 +2145,7 @@ fun korzina(GoTo_main_katalog: () -> Unit){
 
         }
        if (card2vis.value){
-           cardKr(
+           UIKITcardKr(
                item = CardKR(
                    340,
                    140,
@@ -2185,7 +2203,7 @@ fun korzina(GoTo_main_katalog: () -> Unit){
             )
         }
 
-        btn_main(item = Btn_main (
+        UIKITbtn_main(item = Btn_main (
             width_btn = 355,
             height_btn = 65,
             label = "Перейти к оформлению заказа",

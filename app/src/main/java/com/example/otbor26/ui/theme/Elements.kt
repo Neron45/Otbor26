@@ -59,9 +59,9 @@ import com.example.otbor26.Cards
 import com.example.otbor26.MainActivity
 import com.example.otbor26.R
 import com.example.otbor26.TxtField
-import com.example.otbor26.TxtFieldImg
-import com.example.otbor26.card1vis
-import com.example.otbor26.card2vis
+import com.example.uikit.TxtFieldImg
+import com.example.uikit.card1vis
+import com.example.uikit.card2vis
 import com.example.uikit.click
 import com.example.otbor26.click_
 import com.example.uikit.counter
